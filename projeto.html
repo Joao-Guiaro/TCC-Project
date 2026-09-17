@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netuno | Projetos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<style>
+    /* ============================================
+   PROJETOS.HTML
+============================================ */
+
+/* Hero da página */
+.boas-vindas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 100px;
+  gap: 20px;
+}
+
+.texto_destaque {
+  font-size: 3.5rem;
+  color: #fff;
+  font-family: "Cinzel", serif;
+}
+
+.texto_conteudo {
+  color: #00aaff;
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+/* Área dos projetos */
+.servicos-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  width: 90%;
+  max-width: 1400px;
+}
+
+/* Card */
+.card-servico {
+  width: 360px;
+  min-height: 550px;
+
+  background: rgba(11, 31, 54, 0.6);
+  border: 1px solid #1f3e67;
+  border-radius: 16px;
+
+  padding: 35px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.3s ease;
+}
+
+.card-servico:hover {
+  border-color: #00aaff;
+  box-shadow: 0 15px 40px rgba(0, 170, 255, 0.25);
+  transform: translateY(-10px);
+}
+
+/* Ícone */
+.card-icone {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 15px;
+
+  border: 1px solid #1f3e67;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+}
+
+.card-icone i {
+  font-size: 2rem;
+  color: #00aaff;
+}
+
+/* Título */
+.card-titulo {
+  color: white;
+  font-family: "Cinzel", serif;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* Texto */
+.card-descricao {
+  color: #64b5f6;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Lista */
+.card-lista {
+  color: #00aaff;
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+
+.card-lista li {
+  margin-bottom: 10px;
+}
+
+/* Tags */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.card-tags span {
+  border: 1px solid #00aaff;
+  color: #00aaff;
+
+  padding: 5px 12px;
+
+  border-radius: 20px;
+
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Botão */
+.botao_contato {
+  background: #00aaff;
+  color: white;
+
+  text-decoration: none;
+
+  padding: 12px 20px;
+
+  border-radius: 30px;
+
+  display: inline-block;
+
+  transition: 0.3s;
+}
+
+.botao_contato:hover {
+  background: #00ccff;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .container-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-servico {
+    width: 90%;
+    max-width: 450px;
+  }
+
+  .texto_destaque {
+    font-size: 2.5rem;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="container header-container">
+
+        <a href="index.html">
+            <img src="assets/img/Logo_Netuno.png" class="logo">
+        </a>
+
+        <h1 class="nome_empresa">NETUNO</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<section class="boas-vindas" data-aos="fade-up">
+    <h1 class="texto_destaque">Nossos Projetos</h1>
+    <h2 class="texto_conteudo">
+        Soluções reais que demonstram nossa arquitetura e engenharia de software
+    </h2>
+</section>
+
+<section class="servicos-cards">
+
+    <div class="container-cards">
+
+        <!-- PROJETO 1 (ATUAL - ACESSÍVEL) -->
+        <div class="card-servico" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="card-icone">
+                <i class="fa-solid fa-ship"></i>
+            </div>
+
+            <h2 class="card-titulo">Gestão de Inventário + Controle de Scrap </h2>
+
+            <p class="card-descricao">
+                O sistema permite monitorar em tempo real os itens em estoque e registrar materiais descartados (scrap), ajudando a identificar perdas, controlar custos de produção e otimizar o uso de recursos. Com isso, a empresa toma decisões mais precisas e melhora sua produtividade.
+            </p>
+
+            <ul class="card-lista">
+                <li>Estoque em tempo real</li>
+                <li>Controle de scrap</li>
+                <li>Rastreabilidade de materiais</li>
+                <li>Relatórios automáticos</li>
+            </ul>
+
+            <div class="card-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+            </div>
+
+            <a href="index.html" class="botao_contato" style="margin-top:20px; display:inline-block;">
+                Acessar Projeto
+            </a>
+
+        </div>
+
+        <!-- PROJETO 2 -->
+        <div class="card-servico" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="card-icone">
+                <i class="fa-solid fa-database"></i>
+            </div>
+
+            <h2 class="card-titulo">Dashboard de OEE </h2>
+
+            <p class="card-descricao">
+               Visualização em tempo real dos indicadores de OEE, permitindo identificar perdas de produtividade e otimizar o desempenho dos equipamentos.
+
+            <ul class="card-lista">
+                <li>OEE em tempo real</li>
+                <li>Controle de produtividade</li>
+                <li>Análise de desempenho</li>
+                <li>Indicadores de qualidade</li>
+            </ul>
+
+            <div class="card-tags">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+            </div>
+
+        </div>
+
+        <!-- PROJETO 3 -->
+        <div class="card-servico" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="card-icone">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h2 class="card-titulo">Gestão de Energia Inteligente</h2>
+
+            <p class="card-descricao">
+                Controle inteligente do consumo de energia, reduzindo custos, identificando desperdícios e aumentando a eficiência energética da operação.
+            </p>
+
+            <ul class="card-lista">
+                <li>Consumo em tempo real</li>
+                <li>Controle de custos</li>
+                <li>Alertas inteligentes</li>
+                <li>Relatórios automáticos</li>
+            </ul>
+
+            <div class="card-tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>API</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <h6>Reservado por Todos os direitos</h6>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+    duration: 800,
+    once: true
+});
+</script>
+
+</body>
+</html>

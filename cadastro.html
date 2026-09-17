@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Netuno</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .login-page{
+            min-height: calc(100vh - 130px);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:40px;
+        }
+
+        .login-card{
+            width:100%;
+            max-width:500px;
+
+            background: rgba(11,31,54,0.6);
+
+            border:1px solid #1f3e67;
+            border-radius:16px;
+
+            padding:40px;
+
+            box-shadow:0 4px 32px rgba(0,170,255,.08);
+
+            transition:.3s;
+        }
+
+        .login-card:hover{
+            border-color:#00aaff;
+            box-shadow:0 15px 45px rgba(0,170,255,.25);
+        }
+
+        .login-logo{
+            display:flex;
+            justify-content:center;
+            margin-bottom:20px;
+        }
+
+        .login-logo img{
+            width:100px;
+        }
+
+        .login-title{
+            font-family:"Cinzel", serif;
+            color:white;
+            text-align:center;
+            font-size:2rem;
+            margin-bottom:10px;
+        }
+
+        .login-subtitle{
+            text-align:center;
+            color:#00aaff;
+            margin-bottom:30px;
+            font-family:"Lato", sans-serif;
+        }
+
+        .input-group{
+            display:flex;
+            flex-direction:column;
+            margin-bottom:20px;
+        }
+
+        .input-group label{
+            color:white;
+            margin-bottom:8px;
+            font-family:"Lato", sans-serif;
+        }
+
+        .input-group input{
+            background:#0a1a2f;
+            border:1px solid #1f3e67;
+            color:white;
+            padding:14px;
+            border-radius:10px;
+            outline:none;
+            transition:.3s;
+        }
+
+        .input-group input:focus{
+            border-color:#00aaff;
+            box-shadow:0 0 12px rgba(0,170,255,.4);
+        }
+
+        .input-group input::placeholder{
+            color:#64b5f6;
+        }
+
+        .btn-login{
+            width:100%;
+            background:#00aaff;
+            color:white;
+            border:none;
+            border-radius:30px;
+            padding:14px;
+            font-size:1rem;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        .btn-login:hover{
+            background:#00ccff;
+            transform:translateY(-2px);
+        }
+
+        .troca-form{
+            text-align:center;
+            margin-top:25px;
+        }
+
+        .troca-form p{
+            color:#64b5f6;
+            font-family:"Lato", sans-serif;
+        }
+
+        .troca-form a{
+            color:#00aaff;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .troca-form a:hover{
+            color:#00ccff;
+        }
+
+        .voltar{
+            text-align:center;
+            margin-top:25px;
+        }
+
+        .voltar a{
+            color:#64b5f6;
+            text-decoration:none;
+            font-family:"Lato", sans-serif;
+        }
+
+        .voltar a:hover{
+            color:#00aaff;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="container header-container">
+
+        <a href="index.html">
+            <img src="assets/img/Logo_Netuno.png" class="logo">
+        </a>
+
+        <h1 class="nome_empresa">NETUNO</h1>
+
+        <nav>
+            <ul>
+               <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+               <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="login-page">
+
+        <div class="login-card">
+
+            <div class="login-logo">
+                <img src="assets/img/Logo_Netuno.png" alt="Netuno">
+            </div>
+
+            <h1 class="login-title">
+                Criar Conta
+            </h1>
+
+            <p class="login-subtitle">
+                Cadastre-se para iniciar seu projeto conosco
+            </p>
+
+            <form action="cadastro.php" method="post">
+
+                <div class="input-group">
+                    <label>Nome Completo</label>
+                    <input
+                        type="text"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Telefone</label>
+                    <input
+                        type="tel"
+                        name="telefone"
+                        placeholder="(11) 99999-9999"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Senha</label>
+                    <input
+                        type="password"
+                        name="senha"
+                        placeholder="Crie uma senha"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Confirmar Senha</label>
+                    <input
+                        type="password"
+                        name="confirmar_senha"
+                        placeholder="Confirme sua senha"
+                        required>
+                </div>
+
+                <button type="submit" class="btn-login">
+                    Criar Conta
+                </button>
+
+                <div class="troca-form">
+                    <p>
+                        Já possui cadastro? <br>
+                        <a href="login.html">Fazer login</a>
+                    </p>
+                </div>
+
+            </form>
+
+            <div class="voltar">
+                <a href="index.html">
+                    ← Voltar ao site
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <h6>Reservado por Todos os direitos</h6>
+</footer>
+
+</body>
+</html>

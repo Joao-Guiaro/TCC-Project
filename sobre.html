@@ -1,0 +1,237 @@
+<!doctype html>
+
+<!--
+  ============================================
+  PROJETO: NETUNO - Site Corporativo
+  AUTORIA: Projeto TCC
+  FINALIDADE: Página Sobre Nós
+  VERSÃO: 1.0
+  DATA: Abril 2026
+  ============================================
+-->
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netuno | Sobre</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- ============================================
+        CABEÇALHO (HEADER)
+    ============================================ -->
+    <header>
+        <div class="container header-container">
+            <!-- Logo da empresa (imagem) -->
+            <a href="index.html">
+                <img src="assets/img/Logo_Netuno.png" alt="Logo da Empresa" class="logo" />
+            </a>
+
+            <div class="logo-area">
+  <a href="index.html">
+    <img src="assets/img/Logo_Netuno.png" alt="Logo da Empresa" class="logo">
+  </a>
+
+  <a href="index.html" class="link-logo">
+    <h1 class="nome_empresa">NETUNO</h1>
+  </a>
+</div>
+
+            <!-- Menu de navegação -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+        CONTEÚDO PRINCIPAL (MAIN)
+    ============================================ -->
+    <main>
+
+        <!-- SEÇÃO 1: HERO -->
+        <section class="boas-vindas" data-aos="fade-up" data-aos-delay="300">
+            <h1 class="texto_destaque">Quem Somos</h1>
+            <br />
+            <h2 class="texto_conteudo">Cinco estudantes que decidiram construir algo de verdade</h2>
+        </section>
+
+        <!-- SEÇÃO 2: HISTÓRIA / PROPÓSITO -->
+        <section class="sobre-historia" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="texto_destaque">Nossa História</h2>
+
+            <div class="historia-div">
+                <p class="texto_conteudo">
+                    A Netuno nasceu dentro de uma sala de aula. O que começou como um projeto de TCC
+                    para o curso de Desenvolvimento de Sistemas virou algo que a gente passou a levar
+                    de verdade — com reuniões, divisão de tarefas, erros, reescritas e muita depuração
+                    no final do dia.
+                </p>
+
+                <div class="divisor"></div>
+
+                <p class="texto_conteudo">
+                    O nome veio da ideia de profundidade: assim como o oceano tem camadas que a maioria
+                    não vê, um bom software tem estrutura, lógica e cuidado por trás de cada tela.
+                    A gente queria que isso ficasse claro desde o nome.
+                </p>
+
+                <div class="divisor"></div>
+
+                <p class="texto_conteudo">
+                    Somos cinco estudantes com habilidades diferentes — front-end, back-end, banco de dados,
+                    documentação e gestão — que aprenderam na prática o que significa trabalhar em equipe
+                    de verdade. Esse site é o resultado disso.
+                </p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: VALORES -->
+        <section class="sobre-valores" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="texto_destaque">O Que Nos Move</h2>
+
+            <div class="valores-grid">
+
+                <div class="valor-card" data-aos="fade-up" data-aos-delay="150">
+                    <i class="bi bi-patch-check valor-icone"></i>
+                    <p class="valor-titulo">Fazer Bem Feito</p>
+                    <p class="valor-descricao">
+                        Não entregamos algo pela metade. Se não ficou bom,
+                        a gente refaz — mesmo que seja de madrugada antes da apresentação.
+                    </p>
+                </div>
+
+                <div class="valor-card" data-aos="fade-up" data-aos-delay="250">
+                    <i class="bi bi-people valor-icone"></i>
+                    <p class="valor-titulo">Trabalho em Equipe</p>
+                    <p class="valor-descricao">
+                        Cada um cuidou de uma parte, mas o resultado é de todo mundo.
+                        Aprendemos que código em equipe exige comunicação tanto quanto lógica.
+                    </p>
+                </div>
+
+                <div class="valor-card" data-aos="fade-up" data-aos-delay="350">
+                    <i class="bi bi-lightbulb valor-icone"></i>
+                    <p class="valor-titulo">Aprender Sempre</p>
+                    <p class="valor-descricao">
+                        Nenhum de nós sabia tudo quando começou. A diferença é que
+                        a gente não parou quando não sabia — foi atrás e aprendeu.
+                    </p>
+                </div>
+
+                <div class="valor-card" data-aos="fade-up" data-aos-delay="450">
+                    <i class="bi bi-chat-square-text valor-icone"></i>
+                    <p class="valor-titulo">Honestidade</p>
+                    <p class="valor-descricao">
+                        Se algo não funcionou, a gente fala. Sem enrolação,
+                        sem empurrar o problema para o lado. Isso vale no código e na equipe.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: EQUIPE -->
+        <section class="sobre-equipe" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="texto_destaque">Nosso Time de Colaboradores</h2>
+            <h2 class="texto_conteudo">Pessoas reais, código sério</h2>
+
+            <div class="equipe-grid">
+
+                <!-- Enzzo -->
+                <div class="membro-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="membro-avatar">
+
+                        <img src="assets/img/enzzo.jpg" alt="Imagem de Enzzo" / class="enzzo">
+                    </div>
+                    <p class="membro-nome">Enzzo</p>
+                    <p class="membro-cargo">Project Owner (PO) & Full-Stack</p>
+                </div>
+
+                <!-- João Vitor -->
+                <div class="membro-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="membro-avatar">
+                        <img src="assets/img/joao-vitor.jpg" alt="Imagem de João Vitor" class="joao-vitor" />
+                    </div>
+                    <p class="membro-nome">João Vitor</p>
+                    <p class="membro-cargo">Scrum-Master & Back-End</p>
+                </div>
+
+                <!-- Lívia -->
+                <div class="membro-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="membro-avatar">
+                        <img src="assets/img/livia.jpg" alt="Imagem de Lívia" class="livia" />
+                    </div>
+                    <p class="membro-nome">Lívia</p>
+                    <p class="membro-cargo">Documentação</p>
+                </div>
+
+                <!-- João Pedro -->
+                <div class="membro-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="membro-avatar">
+                        <img src="assets/img/joao-pedro.jpg" alt="Imagem de João Pedro" class="joao-pedro" />
+                    </div>
+                    <p class="membro-nome">João Pedro</p>
+                    <p class="membro-cargo">Front-End</p>
+                </div>
+
+                <!-- Gabriel Somaggio -->
+                <div class="membro-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="membro-avatar">
+                        <img src="assets/img/gabriel-somaggio.jpg" alt="Imagem de Gabriel Somaggio"
+                            class="gabriel-somaggio" />
+                    </div>
+                    <p class="membro-nome">Gabriel Somaggio</p>
+                    <p class="membro-cargo">Banco de Dados</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5: CTA FINAL -->
+        <section class="cta-normal" data-aos="fade-up" data-aos-delay="300">
+            <div class="cta-card">
+                <h2 class="texto_destaque">Gostou do que viu?</h2>
+                <br />
+                <p class="texto_conteudo">
+                    Ainda somos estudantes, mas estamos abertos a conversar sobre ideias,
+                    projetos e parcerias. Manda uma mensagem — a gente responde de verdade.
+                </p>
+                <button class="botao_contato">Falar com a Gente</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+        RODAPÉ (FOOTER)
+    ============================================ -->
+    <footer>
+        <h6>Reservado por Todos os direitos</h6>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: false,
+            disableMutationObserver: false,
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!doctype html>
+
+<!-- 
+  ============================================
+  PROJETO: NETUNO - Site Corporativo
+  AUTORIA: Projeto TCC
+  FINALIDADE: Site institucional para empresa 
+  de desenvolvimento de software
+  VERSÃO: 1.0
+  DATA: Abril 2026
+  ============================================
+-->
+
+<html lang="pt-br">
+  <head>
+    <!-- Codificação de caracteres UTF-8 para suportar acentos -->
+    <meta charset="UTF-8" />
+
+    <!-- Responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título da aba do navegador -->
+    <title>Netuno | Desenvolvimento de Sistemas</title>
+
+    <!-- 
+      FONTES EXTERNAS:
+      - Bootstrap Icons: Ícones prontos (HDD, código, banco de dados)
+      - Font Awesome 6.5.1: Ícones das tecnologias (JS, HTML, CSS, Python, PHP)
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Arquivo de estilos principal -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- AOS Animate: Biblioteca para animações ao scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ============================================
+        CABEÇALHO (HEADER)
+        Contém logo, nome da empresa e menu de navegação
+    ============================================ -->
+    <header>
+      <div class="container header-container">
+        <div class="logo-area">
+          <!-- Logo da empresa (imagem) -->
+          <a href="index.html">
+            <img
+              src="assets/img/Logo_Netuno.png"
+              alt="Logo da Empresa"
+              class="logo"
+            />
+          </a>
+
+          <a href="index.html">
+            <!-- Nome da empresa -->
+            <h1 class="nome_empresa">NETUNO</h1>
+          </a>
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="projeto.html">Projetos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============================================
+        CONTEÚDO PRINCIPAL (MAIN)
+    ============================================ -->
+    <main>
+      <!-- 
+        SEÇÃO 1: BOAS-VINDAS (Hero Section)
+        - Título principal chamativo
+        - Subtítulo explicando o serviço
+        - Botão CTA (Call to Action)
+        - Animações AOS ativadas
+      -->
+      <section class="boas-vindas" data-aos="fade-up" data-aos-delay="300">
+        <h1 class="texto_destaque">
+          Arquitetura Digital
+          <span class="separador">e</span>
+          Sistemas Sob Medida
+        </h1>
+
+        <br />
+
+        <h2 class="texto_conteudo">
+          Construímos o backend e a interface que sustentam o seu negócio.
+          Especialistas em soluções robustas com JavaScript, Python e PHP.
+        </h2>
+
+        <br />
+
+        <!-- Botão para iniciar projeto/contato -->
+        <a href="cadastro.html" class="botao_contato">Iniciar Projeto</a>
+      </section>
+
+      <!-- 
+        SEÇÃO 2: STACK TECNOLÓGICA
+        Exibe as tecnologias que a empresa domina
+        Cada card tem animação com delay progressivo
+      -->
+      <section class="stack" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="texto_destaque">Nossa Stack Tecnológica</h2>
+
+        <div class="tecnologias">
+          <!-- Card JavaScript -->
+          <div class="tecnologia" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-javascript icones JS"></i>
+            <p class="texto_destaque_div JS">JavaScript</p>
+            <p class="texto_div">Interfaces modernas e dinâmicas</p>
+          </div>
+
+          <!-- Card HTML -->
+          <div class="tecnologia" data-aos="fade-up" data-aos-delay="250">
+            <i class="fa-brands fa-html5 icones HTML"></i>
+            <p class="texto_destaque_div HTML">HTML</p>
+            <p class="texto_div">Estrutura semântica e acessível</p>
+          </div>
+
+          <!-- Card CSS -->
+          <div class="tecnologia" data-aos="fade-up" data-aos-delay="300">
+            <i class="fa-brands fa-css3-alt icones CSS"></i>
+            <p class="texto_destaque_div CSS">CSS3</p>
+            <p class="texto_div">Design responsivo e performático</p>
+          </div>
+
+          <!-- Card Python -->
+          <div class="tecnologia" data-aos="fade-up" data-aos-delay="350">
+            <i class="fa-brands fa-python icones Python"></i>
+            <p class="texto_destaque_div Python">Python</p>
+            <p class="texto_div">Automação de dados inteligente</p>
+          </div>
+
+          <!-- Card PHP -->
+          <div class="tecnologia" data-aos="fade-up" data-aos-delay="400">
+            <i class="fa-brands fa-php icones PHP"></i>
+            <p class="texto_destaque_div PHP">PHP</p>
+            <p class="texto_div">Backend robusto e escalável</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        SEÇÃO 3: CONTATO/CONTRATO
+        Área de conversão com diferenciais da empresa
+      -->
+      <section class="contrato" data-aos="fade-up" data-aos-delay="250">
+        <h2 class="texto_destaque">Vamos Conversar Sobre Seu Projeto?</h2>
+
+        <!-- Texto institucional -->
+        <div class="contrato-div">
+          <p class="texto_conteudo">
+            Na Netuno, não trabalhamos com promessas vazias. Cada linha de
+            código é escrita com propósito. Cada sistema é projetado para durar.
+          </p>
+
+          <br />
+
+          <p class="texto_conteudo">
+            Somos uma empresa de software que acredita em qualidade artesanal,
+            comunicação honesta e entrega consistente.
+          </p>
+        </div>
+
+        <!-- Título da seção de diferenciais -->
+        <h2 class="texto_destaque">Nosso Diferencial</h2>
+
+        <!-- Cards de diferenciais -->
+        <div
+          class="tecnologias-contrato"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <!-- Diferencial 1: Backend -->
+          <div class="tecnologia-contrato">
+            <i class="bi bi-hdd-stack icones HDD"></i>
+            <p class="texto_destaque_div">Backend Sólido</p>
+            <p class="texto_div">
+              Python e PHP para lógica de negócio confiável
+            </p>
+          </div>
+
+          <!-- Diferencial 2: Frontend -->
+          <div
+            class="tecnologia-contrato"
+            data-aos="fade-up"
+            data-aos-delay="350"
+          >
+            <i class="bi bi-code-slash icones CODE"></i>
+            <p class="texto_destaque_div">Frontend Moderno</p>
+            <p class="texto_div">
+              HTML5, CSS3 e JavaScript para interfaces fluidas
+            </p>
+          </div>
+
+          <!-- Diferencial 3: Dados -->
+          <div
+            class="tecnologia-contrato"
+            data-aos="fade-up"
+            data-aos-delay="450"
+          >
+            <i class="bi bi-database icones DATA"></i>
+            <p class="texto_destaque_div">Dados Estruturados</p>
+            <p class="texto_div">
+              Arquitetura de banco de dados eficiente e segura
+            </p>
+          </div>
+        </div>
+
+        <!-- Chamada final para ação -->
+        <h2 class="texto_destaque">Pronto Pra Começar?</h2>
+
+        <p class="texto_conteudo">
+          Entre em contato para discutir como podemos transformar suas ideias em
+          realidade digital!
+        </p>
+
+        <button class="botao_contato">Fale Conosco</button>
+      </section>
+    </main>
+
+    <!-- ============================================
+        RODAPÉ (FOOTER)
+        Informações de copyright
+    ============================================ -->
+    <footer>
+      <h6>Reservado por Todos os direitos</h6>
+    </footer>
+
+    <!-- 
+      SCRIPTS:
+      - AOS: Biblioteca de animações ao scroll
+      - Inicialização do AOS com configurações personalizadas
+    -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // Inicializa as animações AOS
+      AOS.init({
+        duration: 800, // Duração da animação em ms
+        once: true, // Animação executa apenas uma vez
+        disableMutationObserver: false,
+      });
+    </script>
+  </body>
+</html>
