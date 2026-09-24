@@ -1,8 +1,8 @@
 <?php
 
-$host = "10.140.169.30";
-$usuario = "netuno_app";
-$senha = "Netuno12345."; 
+$host = "localhost";
+$usuario = "root"; // usuario do bacno de dados é: netuno_app
+$senha = "123456"; // a senha do usuario é: Netuno12345.
 $banco = "netuno";
 
 $conexao = new mysqli($host, $usuario, $senha, $banco);
