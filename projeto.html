@@ -1,334 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netuno | Projetos</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-<style>
-    /* ============================================
-   PROJETOS.HTML
-============================================ */
-
-/* Hero da página */
-.boas-vindas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 120px;
-  margin-bottom: 100px;
-  gap: 20px;
-}
-
-.texto_destaque {
-  font-size: 3.5rem;
-  color: #fff;
-  font-family: "Cinzel", serif;
-}
-
-.texto_conteudo {
-  color: #00aaff;
-  font-size: 1.2rem;
-  max-width: 700px;
-}
-
-/* Área dos projetos */
-.servicos-cards {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 150px;
-}
-
-.container-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-  width: 90%;
-  max-width: 1400px;
-}
-
-/* Card */
-.card-servico {
-  width: 360px;
-  min-height: 550px;
-
-  background: rgba(11, 31, 54, 0.6);
-  border: 1px solid #1f3e67;
-  border-radius: 16px;
-
-  padding: 35px;
-
-  display: flex;
-  flex-direction: column;
-
-  transition: 0.3s ease;
-}
-
-.card-servico:hover {
-  border-color: #00aaff;
-  box-shadow: 0 15px 40px rgba(0, 170, 255, 0.25);
-  transform: translateY(-10px);
-}
-
-/* Ícone */
-.card-icone {
-  width: 70px;
-  height: 70px;
-
-  border-radius: 15px;
-
-  border: 1px solid #1f3e67;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 25px;
-}
-
-.card-icone i {
-  font-size: 2rem;
-  color: #00aaff;
-}
-
-/* Título */
-.card-titulo {
-  color: white;
-  font-family: "Cinzel", serif;
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-}
-
-/* Texto */
-.card-descricao {
-  color: #64b5f6;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Lista */
-.card-lista {
-  color: #00aaff;
-  margin-left: 20px;
-  margin-bottom: 25px;
-}
-
-.card-lista li {
-  margin-bottom: 10px;
-}
-
-/* Tags */
-.card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-
-  margin-top: auto;
-  margin-bottom: 20px;
-}
-
-.card-tags span {
-  border: 1px solid #00aaff;
-  color: #00aaff;
-
-  padding: 5px 12px;
-
-  border-radius: 20px;
-
-  font-size: 0.85rem;
-  font-weight: bold;
-}
-
-/* Botão */
-.botao_contato {
-  background: #00aaff;
-  color: white;
-
-  text-decoration: none;
-
-  padding: 12px 20px;
-
-  border-radius: 30px;
-
-  display: inline-block;
-
-  transition: 0.3s;
-}
-
-.botao_contato:hover {
-  background: #00ccff;
-}
-
-/* Responsivo */
-@media (max-width: 900px) {
-  .container-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-servico {
-    width: 90%;
-    max-width: 450px;
-  }
-
-  .texto_destaque {
-    font-size: 2.5rem;
-  }
-}
-</style>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projetos · Netuno</title>
+<meta name="description" content="Controle de scrap, dashboard de OEE e gestão de energia: sistemas industriais construídos pela Netuno.">
+<meta name="theme-color" content="#0a2a52">
+<link rel="icon" type="image/png" href="assets/img/Logo_Netuno.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&amp;display=swap">
+<link rel="stylesheet" href="assets/css/netuno.css">
+<script>(function(){var h=document.documentElement;h.classList.add("js");var mq=!!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches),rm=mq;try{var mp=localStorage.getItem("netuno:motion");if(mp)rm=mp==="reduced"}catch(e){}if(rm)h.classList.add("motion-reduced");try{var s=window.sessionStorage,t=+s.getItem("netuno:dive")||0;s.removeItem("netuno:dive");if(t&&Date.now()-t<8000&&!rm){h.classList.add("is-diving")}else if(!s.getItem("netuno:visited")&&!rm&&!h.hasAttribute("data-noloader")){h.classList.add("is-first")}}catch(e){}setTimeout(function(){if(!window.__netunoReady){h.classList.remove("is-first","is-diving")}},4000)})();</script>
 </head>
-
-<body>
-
-<header>
-    <div class="container header-container">
-
-        <a href="index.html">
-            <img src="assets/img/Logo_Netuno.png" class="logo">
-        </a>
-
-        <h1 class="nome_empresa">NETUNO</h1>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-            </ul>
-        </nav>
-
-    </div>
+<body data-page="projetos">
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="markClip"><circle cx="50" cy="50" r="41"/></clipPath>
+  </defs>
+  <symbol id="mark" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/>
+    <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M50 76V17"/><path d="M43.5 27 50 16l6.5 11"/><path d="M33 21c-1 13 3 23 17 26 14-3 18-13 17-26"/><path d="M29.5 26 33 20l3.5 6"/><path d="M63.5 26 67 20l3.5 6"/>
+    </g>
+    <g fill="none" stroke="#3aafdb" stroke-width="5" stroke-linecap="round" clip-path="url(#markClip)">
+      <path d="M6 62c16-9 30 5 45-3s27-10 45-5"/><path d="M6 71c16-9 31 5 46-3s27-10 44-5"/><path d="M8 80c16-8 30 5 45-3s26-9 41-6"/>
+    </g>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"/><path d="m2 2 20 20"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-package" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+  <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+</svg>
+<div class="ocean" aria-hidden="true"></div>
+<canvas class="snow" aria-hidden="true"></canvas>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" data-tone="light">
+  <a class="brand" href="index.html" aria-label="Netuno, página inicial">
+    <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg><span class="brand__word">NETUNO</span>
+  </a>
+  <nav class="nav" aria-label="Principal">
+    <ul class="nav__links"><li><a href="index.html">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="projeto.html" aria-current="page">Projetos</a></li><li><a href="sobre.html">Sobre</a></li></ul>
+    <a class="btn btn--ghost btn--sm" href="login.html"><span class="btn__label">Área do cliente</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span></a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
 </header>
-
-<main>
-
-<section class="boas-vindas" data-aos="fade-up">
-    <h1 class="texto_destaque">Nossos Projetos</h1>
-    <h2 class="texto_conteudo">
-        Soluções reais que demonstram nossa arquitetura e engenharia de software
-    </h2>
-</section>
-
-<section class="servicos-cards">
-
-    <div class="container-cards">
-
-        <!-- PROJETO 1 (ATUAL - ACESSÍVEL) -->
-        <div class="card-servico" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="card-icone">
-                <i class="fa-solid fa-ship"></i>
-            </div>
-
-            <h2 class="card-titulo">Gestão de Inventário + Controle de Scrap </h2>
-
-            <p class="card-descricao">
-                O sistema permite monitorar em tempo real os itens em estoque e registrar materiais descartados (scrap), ajudando a identificar perdas, controlar custos de produção e otimizar o uso de recursos. Com isso, a empresa toma decisões mais precisas e melhora sua produtividade.
-            </p>
-
-            <ul class="card-lista">
-                <li>Estoque em tempo real</li>
-                <li>Controle de scrap</li>
-                <li>Rastreabilidade de materiais</li>
-                <li>Relatórios automáticos</li>
-            </ul>
-
-            <div class="card-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JS</span>
-            </div>
-
-            <a href="index.html" class="botao_contato" style="margin-top:20px; display:inline-block;">
-                Acessar Projeto
-            </a>
-
-        </div>
-
-        <!-- PROJETO 2 -->
-        <div class="card-servico" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="card-icone">
-                <i class="fa-solid fa-database"></i>
-            </div>
-
-            <h2 class="card-titulo">Dashboard de OEE </h2>
-
-            <p class="card-descricao">
-               Visualização em tempo real dos indicadores de OEE, permitindo identificar perdas de produtividade e otimizar o desempenho dos equipamentos.
-
-            <ul class="card-lista">
-                <li>OEE em tempo real</li>
-                <li>Controle de produtividade</li>
-                <li>Análise de desempenho</li>
-                <li>Indicadores de qualidade</li>
-            </ul>
-
-            <div class="card-tags">
-                <span>PHP</span>
-                <span>MySQL</span>
-                <span>Bootstrap</span>
-            </div>
-
-        </div>
-
-        <!-- PROJETO 3 -->
-        <div class="card-servico" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="card-icone">
-                <i class="fa-solid fa-chart-line"></i>
-            </div>
-
-            <h2 class="card-titulo">Gestão de Energia Inteligente</h2>
-
-            <p class="card-descricao">
-                Controle inteligente do consumo de energia, reduzindo custos, identificando desperdícios e aumentando a eficiência energética da operação.
-            </p>
-
-            <ul class="card-lista">
-                <li>Consumo em tempo real</li>
-                <li>Controle de custos</li>
-                <li>Alertas inteligentes</li>
-                <li>Relatórios automáticos</li>
-            </ul>
-
-            <div class="card-tags">
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>API</span>
-            </div>
-
-        </div>
-
+<div class="menu" id="menu">
+  <ul class="menu__links"><li><a href="index.html">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="projeto.html" aria-current="page">Projetos</a></li><li><a href="sobre.html">Sobre</a></li></ul>
+  <div class="menu__foot">
+    <a class="btn btn--boia" href="login.html"><span class="btn__label">Área do cliente</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span></a>
+    <a class="btn btn--ghost" href="cadastro.html"><span class="btn__label">Criar conta</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
+  </div>
+</div>
+<div class="gauge" data-tone="light" aria-hidden="true">
+  <span class="gauge__ends gauge__ends--top label">0 m</span>
+  <div class="gauge__scale"></div>
+  <div class="gauge__marker"></div>
+  <div class="gauge__readout"><span class="gauge__depth" data-depth-readout>0 m</span><span class="gauge__zone label" data-zone-readout>Epipelágica</span></div>
+  <span class="gauge__ends gauge__ends--bottom label" data-depth-max>4.000 m</span>
+</div>
+<div id="smooth-wrapper"><div id="smooth-content">
+<main id="conteudo">
+<section class="hero hero--page" data-depth="0" aria-labelledby="hero-title">
+  <div class="hero__layer hero__dry">
+    <div class="hero__layout">
+      <h1 class="hero__title display" id="hero-title">Nossos<br>projetos.</h1>
     </div>
-
+  </div>
+  <div class="hero__layer hero__swell" aria-hidden="true"></div>
+  <div class="hero__layer hero__water">
+    <div class="rays" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="hero__layout">
+      <p class="hero__title display" aria-hidden="true">Nossos<br>projetos.</p>
+      <div class="hero__foot">
+        <div class="hero__hint" aria-hidden="true"><span class="hero__drop"></span><span class="label">Role para mergulhar</span></div>
+        <div class="hero__below">
+          <p class="hero__lead">Soluções reais que demonstram nossa arquitetura e engenharia de software.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="hero__crest" aria-hidden="true"><path d=""/></svg>
 </section>
 
+<section class="projects" data-depth="300" data-depth-end="2400" aria-label="Projetos">
+  <div class="projects__pin">
+    <div class="projects__track">
+      <article class="project">
+        <div class="project__visual"><figure style="margin:0"><div class="mock">
+  <div class="mock__bar"><strong>Controle de scrap</strong><span class="mock__chip">Últimos 14 dias</span></div>
+  <div class="mock__kpis">
+    <div class="mock__kpi"><span>Peças refugadas</span><strong data-count="1284">1.284</strong></div>
+    <div class="mock__kpi mock__kpi--alert"><span>Custo do scrap</span><strong data-count="9870.4" data-dec="2" data-prefix="R$ ">R$ 9.870,40</strong></div>
+    <div class="mock__kpi"><span>Taxa de scrap</span><strong data-count="2.4" data-dec="1" data-suffix="%">2,4%</strong></div>
+  </div>
+  <div class="mock__chart" aria-hidden="true"><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:61%"></i><i style="--h:48%"></i><i style="--h:70%"></i><i style="--h:57%"></i><i style="--h:92%" class="is-peak"></i><i style="--h:63%"></i><i style="--h:49%"></i><i style="--h:58%"></i><i style="--h:45%"></i><i style="--h:66%"></i><i style="--h:54%"></i></div>
+</div>
+<figcaption class="layer__caption">Tela no estilo do painel real. Dados ilustrativos.</figcaption></figure></div>
+        <div class="project__body">
+          <svg class="i project__icon" aria-hidden="true"><use href="#i-package"/></svg>
+          <h2 class="h2">Gestão de inventário + controle de scrap</h2>
+          <p>O sistema permite monitorar os itens em estoque e registrar materiais descartados (scrap), ajudando a identificar perdas, controlar custos de produção e otimizar o uso de recursos. Com isso, a empresa toma decisões mais precisas e melhora sua produtividade.</p>
+          <ul class="ticks"><li>Estoque em tempo real</li><li>Controle de scrap</li><li>Rastreabilidade de materiais</li><li>Relatórios automáticos</li></ul>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span><span>MySQL</span></div>
+          <a class="btn btn--boia project__cta" href="login.html" data-magnetic><span class="btn__label">Acessar projeto</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project__visual"><div class="viz oee">
+  <div class="viz__head"><strong>OEE · Linha 2</strong><span class="label">Turno A</span></div>
+  <div class="oee__row"><span>Disponibilidade</span><span class="oee__track"><i style="--v:91%"></i></span><b data-count="91" data-suffix="%">91%</b></div><div class="oee__row"><span>Performance</span><span class="oee__track"><i style="--v:86%"></i></span><b data-count="86" data-suffix="%">86%</b></div><div class="oee__row"><span>Qualidade</span><span class="oee__track"><i style="--v:97%"></i></span><b data-count="97" data-suffix="%">97%</b></div>
+  <div class="oee__total"><strong data-count="75.9" data-dec="1" data-suffix="%">75,9%</strong><span class="muted">OEE = D × P × Q</span></div>
+  <p class="viz__note">Valores ilustrativos.</p>
+</div></div>
+        <div class="project__body">
+          <svg class="i project__icon" aria-hidden="true"><use href="#i-activity"/></svg>
+          <h2 class="h2">Dashboard de OEE</h2>
+          <p>Visualização em tempo real dos indicadores de OEE, permitindo identificar perdas de produtividade e otimizar o desempenho dos equipamentos.</p>
+          <ul class="ticks"><li>OEE em tempo real</li><li>Controle de produtividade</li><li>Análise de desempenho</li><li>Indicadores de qualidade</li></ul>
+          <div class="tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+          
+        </div>
+      </article>
+      <article class="project">
+        <div class="project__visual"><div class="viz energy">
+  <div class="viz__head"><strong>Consumo de energia · kWh</strong><span class="label">Últimas 24 h</span></div>
+  <svg viewBox="0 0 320 160" aria-hidden="true">
+    <g class="grid"><line x1="0" y1="20" x2="320" y2="20"/><line x1="0" y1="60" x2="320" y2="60"/><line x1="0" y1="100" x2="320" y2="100"/><line x1="0" y1="140" x2="320" y2="140"/></g>
+    <path class="area" d="M0.0 112.0 C2.2 112.3 8.9 113.3 13.3 114.0 C17.8 114.7 22.2 116.2 26.7 116.0 C31.1 115.8 35.6 115.0 40.0 113.0 C44.4 111.0 48.9 108.2 53.3 104.0 C57.8 99.8 62.2 93.7 66.7 88.0 C71.1 82.3 75.6 75.0 80.0 70.0 C84.4 65.0 88.9 61.3 93.3 58.0 C97.8 54.7 102.2 53.3 106.7 50.0 C111.1 46.7 115.6 39.0 120.0 38.0 C124.4 37.0 128.9 41.0 133.3 44.0 C137.8 47.0 142.2 53.0 146.7 56.0 C151.1 59.0 155.6 61.3 160.0 62.0 C164.4 62.7 168.9 61.7 173.3 60.0 C177.8 58.3 182.2 55.2 186.7 52.0 C191.1 48.8 195.6 43.7 200.0 41.0 C204.4 38.3 208.9 34.8 213.3 36.0 C217.8 37.2 222.2 43.0 226.7 48.0 C231.1 53.0 235.6 60.3 240.0 66.0 C244.4 71.7 248.9 77.0 253.3 82.0 C257.8 87.0 262.2 92.3 266.7 96.0 C271.1 99.7 275.6 102.0 280.0 104.0 C284.4 106.0 288.9 107.0 293.3 108.0 C297.8 109.0 302.2 109.5 306.7 110.0 C311.1 110.5 317.8 110.8 320.0 111.0 L320 140 L0 140 Z"/>
+    <line class="limit" x1="0" y1="46" x2="320" y2="46"/>
+    <text x="2" y="40">limite contratado</text>
+    <path class="curve" d="M0.0 112.0 C2.2 112.3 8.9 113.3 13.3 114.0 C17.8 114.7 22.2 116.2 26.7 116.0 C31.1 115.8 35.6 115.0 40.0 113.0 C44.4 111.0 48.9 108.2 53.3 104.0 C57.8 99.8 62.2 93.7 66.7 88.0 C71.1 82.3 75.6 75.0 80.0 70.0 C84.4 65.0 88.9 61.3 93.3 58.0 C97.8 54.7 102.2 53.3 106.7 50.0 C111.1 46.7 115.6 39.0 120.0 38.0 C124.4 37.0 128.9 41.0 133.3 44.0 C137.8 47.0 142.2 53.0 146.7 56.0 C151.1 59.0 155.6 61.3 160.0 62.0 C164.4 62.7 168.9 61.7 173.3 60.0 C177.8 58.3 182.2 55.2 186.7 52.0 C191.1 48.8 195.6 43.7 200.0 41.0 C204.4 38.3 208.9 34.8 213.3 36.0 C217.8 37.2 222.2 43.0 226.7 48.0 C231.1 53.0 235.6 60.3 240.0 66.0 C244.4 71.7 248.9 77.0 253.3 82.0 C257.8 87.0 262.2 92.3 266.7 96.0 C271.1 99.7 275.6 102.0 280.0 104.0 C284.4 106.0 288.9 107.0 293.3 108.0 C297.8 109.0 302.2 109.5 306.7 110.0 C311.1 110.5 317.8 110.8 320.0 111.0"/>
+    <text x="0" y="156">00h</text><text x="150" y="156">12h</text><text x="300" y="156">24h</text>
+  </svg>
+  <p class="viz__note">Curva ilustrativa: o sistema alerta quando o consumo passa do limite.</p>
+</div></div>
+        <div class="project__body">
+          <svg class="i project__icon" aria-hidden="true"><use href="#i-zap"/></svg>
+          <h2 class="h2">Gestão de energia inteligente</h2>
+          <p>Controle inteligente do consumo de energia, reduzindo custos, identificando desperdícios e aumentando a eficiência energética da operação.</p>
+          <ul class="ticks"><li>Consumo em tempo real</li><li>Controle de custos</li><li>Alertas inteligentes</li><li>Relatórios automáticos</li></ul>
+          <div class="tags"><span>Python</span><span>Pandas</span><span>API</span></div>
+          
+        </div>
+      </article>
+    </div>
+    <div class="projects__progress" aria-hidden="true">
+      <span class="label projects__count">1 / 3</span>
+      <span class="projects__bar"><i></i></span>
+      <span class="label">Role para navegar</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-depth="3000" aria-labelledby="cta-title">
+  <div class="wrap cta-block">
+    <h2 class="display" id="cta-title" data-split>Quer ver o sistema funcionando?</h2>
+    <div class="cta-block__side" data-rise>
+      <p>O controle de scrap está no ar. Entre com sua conta ou crie uma para testar com dados de exemplo.</p>
+      <div class="close__actions">
+        <a class="btn btn--boia" href="login.html" data-magnetic><span class="btn__label">Área do cliente</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span></a>
+        <a class="btn btn--ghost" href="cadastro.html"><span class="btn__label">Criar conta</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
-
-<footer>
-    <h6>Reservado por Todos os direitos</h6>
+<footer class="footer">
+  <svg class="seabed" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
+    <path class="contour" d="M0 66C120 40 220 58 330 48S560 22 700 44 960 74 1090 52 1320 32 1440 46"/>
+    <path class="contour" d="M0 96C140 74 250 92 360 82S580 62 720 80 980 102 1100 88 1320 70 1440 82"/>
+    <path class="ground" d="M0 140V94c110-22 210 4 320-6s150-34 260-28 180 36 300 34 180-24 290-22 180 16 270 10v58Z"/>
+  </svg>
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brandcol">
+        <a class="brand" href="index.html" aria-label="Netuno, página inicial"><svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg><span class="brand__word">NETUNO</span></a>
+        <p class="footer__about">Estúdio de software nascido como TCC do curso de Desenvolvimento de Sistemas. Cinco estudantes, três camadas de software.</p>
+      </div>
+      <nav aria-label="Site">
+        <h2 class="label">Site</h2>
+        <ul><li><a href="index.html">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="projeto.html">Projetos</a></li><li><a href="sobre.html">Sobre</a></li></ul>
+      </nav>
+      <nav aria-label="Conta">
+        <h2 class="label">Conta</h2>
+        <ul><li><a href="login.html">Área do cliente</a></li><li><a href="cadastro.html">Criar conta</a></li></ul>
+      </nav>
+      <div>
+        <h2 class="label">Profundidade</h2>
+        <p class="footer__about" style="margin:0 0 1rem">Você chegou a <span class="num" data-depth-max>4.000 m</span>.</p>
+        <button class="surface-btn" type="button" data-surface><svg class="i" aria-hidden="true"><use href="#i-arrow-up"/></svg>Voltar à superfície</button>
+        <button class="surface-btn motion-toggle" type="button" data-motion-toggle aria-pressed="true">Animações: <span>completas</span></button>
+      </div>
+    </div>
+    <div class="footer__base"><span>© 2026 Netuno. Todos os direitos reservados.</span><span>Projeto de TCC · Desenvolvimento de Sistemas</span></div>
+  </div>
 </footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({
-    duration: 800,
-    once: true
-});
-</script>
-
+</div></div>
+<div class="tide" aria-hidden="true">
+  <div class="tide__sky"><div class="tide__brand"><svg class="tide__mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <circle class="ring" cx="50" cy="50" r="45" stroke-width="5"/>
+  <g class="trident" stroke-width="4.5"><path d="M50 76V17"/><path d="M43.5 27 50 16l6.5 11"/><path d="M33 21c-1 13 3 23 17 26 14-3 18-13 17-26"/><path d="M29.5 26 33 20l3.5 6"/><path d="M63.5 26 67 20l3.5 6"/></g>
+  <g class="waves" stroke-width="4.5" clip-path="url(#markClip)"><path d="M6 62c16-9 30 5 45-3s27-10 45-5"/><path d="M6 71c16-9 31 5 46-3s27-10 44-5"/><path d="M8 80c16-8 30 5 45-3s26-9 41-6"/></g>
+</svg><span class="tide__word">NETUNO</span><span class="tide__tag">Guiding through uncertainty</span></div></div>
+  <div class="tide__water"><div class="tide__brand"><svg class="tide__mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <circle class="ring" cx="50" cy="50" r="45" stroke-width="5"/>
+  <g class="trident" stroke-width="4.5"><path d="M50 76V17"/><path d="M43.5 27 50 16l6.5 11"/><path d="M33 21c-1 13 3 23 17 26 14-3 18-13 17-26"/><path d="M29.5 26 33 20l3.5 6"/><path d="M63.5 26 67 20l3.5 6"/></g>
+  <g class="waves" stroke-width="4.5" clip-path="url(#markClip)"><path d="M6 62c16-9 30 5 45-3s27-10 45-5"/><path d="M6 71c16-9 31 5 46-3s27-10 44-5"/><path d="M8 80c16-8 30 5 45-3s26-9 41-6"/></g>
+</svg><span class="tide__word">NETUNO</span><span class="tide__tag">Guiding through uncertainty</span></div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+<script src="assets/js/netuno.js"></script>
 </body>
 </html>

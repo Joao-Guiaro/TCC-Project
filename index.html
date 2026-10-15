@@ -1,262 +1,270 @@
 <!doctype html>
-
-<!-- 
-  ============================================
-  PROJETO: NETUNO - Site Corporativo
-  AUTORIA: Projeto TCC
-  FINALIDADE: Site institucional para empresa 
-  de desenvolvimento de software
-  VERSÃO: 1.0
-  DATA: Abril 2026
-  ============================================
--->
-
 <html lang="pt-br">
-  <head>
-    <!-- Codificação de caracteres UTF-8 para suportar acentos -->
-    <meta charset="UTF-8" />
-
-    <!-- Responsividade em dispositivos móveis -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Título da aba do navegador -->
-    <title>Netuno | Desenvolvimento de Sistemas</title>
-
-    <!-- 
-      FONTES EXTERNAS:
-      - Bootstrap Icons: Ícones prontos (HDD, código, banco de dados)
-      - Font Awesome 6.5.1: Ícones das tecnologias (JS, HTML, CSS, Python, PHP)
-    -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-
-    <!-- Arquivo de estilos principal -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- AOS Animate: Biblioteca para animações ao scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <!-- ============================================
-        CABEÇALHO (HEADER)
-        Contém logo, nome da empresa e menu de navegação
-    ============================================ -->
-    <header>
-      <div class="container header-container">
-        <div class="logo-area">
-          <!-- Logo da empresa (imagem) -->
-          <a href="index.html">
-            <img
-              src="assets/img/Logo_Netuno.png"
-              alt="Logo da Empresa"
-              class="logo"
-            />
-          </a>
-
-          <a href="index.html">
-            <!-- Nome da empresa -->
-            <h1 class="nome_empresa">NETUNO</h1>
-          </a>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Netuno · Arquitetura digital e sistemas sob medida</title>
+<meta name="description" content="Estúdio de software que constrói interface, backend e banco de dados sob medida com JavaScript, Python e PHP.">
+<meta name="theme-color" content="#0a2a52">
+<link rel="icon" type="image/png" href="assets/img/Logo_Netuno.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&amp;display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
+<link rel="stylesheet" href="assets/css/netuno.css">
+<script>(function(){var h=document.documentElement;h.classList.add("js");var mq=!!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches),rm=mq;try{var mp=localStorage.getItem("netuno:motion");if(mp)rm=mp==="reduced"}catch(e){}if(rm)h.classList.add("motion-reduced");try{var s=window.sessionStorage,t=+s.getItem("netuno:dive")||0;s.removeItem("netuno:dive");if(t&&Date.now()-t<8000&&!rm){h.classList.add("is-diving")}else if(!s.getItem("netuno:visited")&&!rm&&!h.hasAttribute("data-noloader")){h.classList.add("is-first")}}catch(e){}setTimeout(function(){if(!window.__netunoReady){h.classList.remove("is-first","is-diving")}},4000)})();</script>
+</head>
+<body data-page="home">
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="markClip"><circle cx="50" cy="50" r="41"/></clipPath>
+  </defs>
+  <symbol id="mark" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/>
+    <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M50 76V17"/><path d="M43.5 27 50 16l6.5 11"/><path d="M33 21c-1 13 3 23 17 26 14-3 18-13 17-26"/><path d="M29.5 26 33 20l3.5 6"/><path d="M63.5 26 67 20l3.5 6"/>
+    </g>
+    <g fill="none" stroke="#3aafdb" stroke-width="5" stroke-linecap="round" clip-path="url(#markClip)">
+      <path d="M6 62c16-9 30 5 45-3s27-10 45-5"/><path d="M6 71c16-9 31 5 46-3s27-10 44-5"/><path d="M8 80c16-8 30 5 45-3s26-9 41-6"/>
+    </g>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"/><path d="m2 2 20 20"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-package" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+  <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+</svg>
+<div class="ocean" aria-hidden="true"></div>
+<canvas class="snow" aria-hidden="true"></canvas>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" data-tone="light">
+  <a class="brand" href="index.html" aria-label="Netuno, página inicial">
+    <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg><span class="brand__word">NETUNO</span>
+  </a>
+  <nav class="nav" aria-label="Principal">
+    <ul class="nav__links"><li><a href="index.html" aria-current="page">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="projeto.html">Projetos</a></li><li><a href="sobre.html">Sobre</a></li></ul>
+    <a class="btn btn--ghost btn--sm" href="login.html"><span class="btn__label">Área do cliente</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span></a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
+</header>
+<div class="menu" id="menu">
+  <ul class="menu__links"><li><a href="index.html" aria-current="page">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="projeto.html">Projetos</a></li><li><a href="sobre.html">Sobre</a></li></ul>
+  <div class="menu__foot">
+    <a class="btn btn--boia" href="login.html"><span class="btn__label">Área do cliente</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span></a>
+    <a class="btn btn--ghost" href="cadastro.html"><span class="btn__label">Criar conta</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
+  </div>
+</div>
+<div class="gauge" data-tone="light" aria-hidden="true">
+  <span class="gauge__ends gauge__ends--top label">0 m</span>
+  <div class="gauge__scale"></div>
+  <div class="gauge__marker"></div>
+  <div class="gauge__readout"><span class="gauge__depth" data-depth-readout>0 m</span><span class="gauge__zone label" data-zone-readout>Epipelágica</span></div>
+  <span class="gauge__ends gauge__ends--bottom label" data-depth-max>4.000 m</span>
+</div>
+<div id="smooth-wrapper"><div id="smooth-content">
+<main id="conteudo">
+<section class="hero" data-depth="0" aria-labelledby="hero-title">
+  <div class="hero__layer hero__dry">
+    <div class="hero__layout">
+      <h1 class="hero__title display" id="hero-title">Arquitetura digital<br>e sistemas<br>sob medida.</h1>
+    </div>
+  </div>
+  <div class="hero__layer hero__swell" aria-hidden="true"></div>
+  <div class="hero__layer hero__water">
+    <div class="rays" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="hero__layout">
+      <p class="hero__title display" aria-hidden="true">Arquitetura digital<br>e sistemas<br>sob medida.</p>
+      <div class="hero__foot">
+        <div class="hero__hint" aria-hidden="true"><span class="hero__drop"></span><span class="label">Role para mergulhar</span></div>
+        <div class="hero__below">
+          <p class="hero__lead">Construímos o backend e a interface que sustentam o seu negócio. Especialistas em soluções robustas com JavaScript, Python e PHP.</p>
+          <div class="hero__actions"><a class="btn btn--boia" href="cadastro.html" data-magnetic><span class="btn__label">Iniciar projeto</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a><a class="link" href="projeto.html">Ver projetos <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
         </div>
-
-        <!-- Menu de navegação -->
-        <nav>
-          <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="projeto.html">Projetos</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-          </ul>
-        </nav>
       </div>
-    </header>
+    </div>
+  </div>
+  <svg class="hero__crest" aria-hidden="true"><path d=""/></svg>
+</section>
 
-    <!-- ============================================
-        CONTEÚDO PRINCIPAL (MAIN)
-    ============================================ -->
-    <main>
-      <!-- 
-        SEÇÃO 1: BOAS-VINDAS (Hero Section)
-        - Título principal chamativo
-        - Subtítulo explicando o serviço
-        - Botão CTA (Call to Action)
-        - Animações AOS ativadas
-      -->
-      <section class="boas-vindas" data-aos="fade-up" data-aos-delay="300">
-        <h1 class="texto_destaque">
-          Arquitetura Digital
-          <span class="separador">e</span>
-          Sistemas Sob Medida
-        </h1>
+<section class="section manifesto" data-depth="60" aria-label="Manifesto">
+  <div class="rays" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <p class="manifesto__text" data-scrub-words>Na Netuno, não trabalhamos com promessas vazias. Cada linha de código é escrita com propósito. Cada sistema é projetado para durar.</p>
+    <div class="manifesto__aside" data-stagger>
+      <p>Somos uma empresa de software que acredita em qualidade artesanal, comunicação honesta e entrega consistente.</p>
+      <p>Assim como o oceano, um bom software tem camadas que a maioria não vê. Desça com a gente.</p>
+    </div>
+  </div>
+</section>
 
-        <br />
-
-        <h2 class="texto_conteudo">
-          Construímos o backend e a interface que sustentam o seu negócio.
-          Especialistas em soluções robustas com JavaScript, Python e PHP.
-        </h2>
-
-        <br />
-
-        <!-- Botão para iniciar projeto/contato -->
-        <a href="cadastro.html" class="botao_contato">Iniciar Projeto</a>
-      </section>
-
-      <!-- 
-        SEÇÃO 2: STACK TECNOLÓGICA
-        Exibe as tecnologias que a empresa domina
-        Cada card tem animação com delay progressivo
-      -->
-      <section class="stack" data-aos="fade-up" data-aos-delay="200">
-        <h2 class="texto_destaque">Nossa Stack Tecnológica</h2>
-
-        <div class="tecnologias">
-          <!-- Card JavaScript -->
-          <div class="tecnologia" data-aos="fade-up" data-aos-delay="200">
-            <i class="bi bi-javascript icones JS"></i>
-            <p class="texto_destaque_div JS">JavaScript</p>
-            <p class="texto_div">Interfaces modernas e dinâmicas</p>
-          </div>
-
-          <!-- Card HTML -->
-          <div class="tecnologia" data-aos="fade-up" data-aos-delay="250">
-            <i class="fa-brands fa-html5 icones HTML"></i>
-            <p class="texto_destaque_div HTML">HTML</p>
-            <p class="texto_div">Estrutura semântica e acessível</p>
-          </div>
-
-          <!-- Card CSS -->
-          <div class="tecnologia" data-aos="fade-up" data-aos-delay="300">
-            <i class="fa-brands fa-css3-alt icones CSS"></i>
-            <p class="texto_destaque_div CSS">CSS3</p>
-            <p class="texto_div">Design responsivo e performático</p>
-          </div>
-
-          <!-- Card Python -->
-          <div class="tecnologia" data-aos="fade-up" data-aos-delay="350">
-            <i class="fa-brands fa-python icones Python"></i>
-            <p class="texto_destaque_div Python">Python</p>
-            <p class="texto_div">Automação de dados inteligente</p>
-          </div>
-
-          <!-- Card PHP -->
-          <div class="tecnologia" data-aos="fade-up" data-aos-delay="400">
-            <i class="fa-brands fa-php icones PHP"></i>
-            <p class="texto_destaque_div PHP">PHP</p>
-            <p class="texto_div">Backend robusto e escalável</p>
-          </div>
+<section class="layers" id="camadas" data-depth="200" data-depth-end="3200" aria-labelledby="camadas-title">
+  <div class="layers__stage">
+    <svg class="layers__map" aria-hidden="true"></svg>
+    <div class="layers__head">
+      <h2 class="h1" id="camadas-title" data-split>Nosso diferencial</h2>
+      <p class="lead">Três camadas, um só sistema. Da tela que o usuário toca ao banco que guarda cada registro.</p>
+    </div>
+    <div class="layers__aside" aria-hidden="true">
+      <div class="readout">
+        <span class="readout__value"><span data-depth-readout="value">200</span><small>m</small></span>
+        <span class="readout__zone label" data-zone-readout="long">Zona epipelágica · onde a luz chega</span>
+      </div>
+      <ol class="strata">
+        <li class="is-active">Interface · 0 a 200 m</li>
+        <li>Lógica · 200 a 1.000 m</li>
+        <li>Dados · 1.000 a 4.000 m</li>
+      </ol>
+    </div>
+    <ol class="layers__list">
+      <li class="layer">
+        <div class="layer__text">
+          <span class="layer__depth" aria-hidden="true">200 m</span>
+          <h3 class="h2">Frontend moderno</h3>
+          <p class="layer__what">Interface: o que o usuário vê.</p>
+          <p>HTML5, CSS3 e JavaScript para interfaces fluidas.</p>
         </div>
-      </section>
-
-      <!-- 
-        SEÇÃO 3: CONTATO/CONTRATO
-        Área de conversão com diferenciais da empresa
-      -->
-      <section class="contrato" data-aos="fade-up" data-aos-delay="250">
-        <h2 class="texto_destaque">Vamos Conversar Sobre Seu Projeto?</h2>
-
-        <!-- Texto institucional -->
-        <div class="contrato-div">
-          <p class="texto_conteudo">
-            Na Netuno, não trabalhamos com promessas vazias. Cada linha de
-            código é escrita com propósito. Cada sistema é projetado para durar.
-          </p>
-
-          <br />
-
-          <p class="texto_conteudo">
-            Somos uma empresa de software que acredita em qualidade artesanal,
-            comunicação honesta e entrega consistente.
-          </p>
+        <figure class="layer__artifact"><div class="mock">
+  <div class="mock__bar"><strong>Controle de scrap</strong><span class="mock__chip">Últimos 14 dias</span></div>
+  <div class="mock__kpis">
+    <div class="mock__kpi"><span>Peças refugadas</span><strong data-count="1284">1.284</strong></div>
+    <div class="mock__kpi mock__kpi--alert"><span>Custo do scrap</span><strong data-count="9870.4" data-dec="2" data-prefix="R$ ">R$ 9.870,40</strong></div>
+    <div class="mock__kpi"><span>Taxa de scrap</span><strong data-count="2.4" data-dec="1" data-suffix="%">2,4%</strong></div>
+  </div>
+  <div class="mock__chart" aria-hidden="true"><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:61%"></i><i style="--h:48%"></i><i style="--h:70%"></i><i style="--h:57%"></i><i style="--h:92%" class="is-peak"></i><i style="--h:63%"></i><i style="--h:49%"></i><i style="--h:58%"></i><i style="--h:45%"></i><i style="--h:66%"></i><i style="--h:54%"></i></div>
+</div>
+<figcaption class="layer__caption">Tela no estilo do nosso painel de scrap. Dados ilustrativos.</figcaption></figure>
+      </li>
+      <li class="layer">
+        <div class="layer__text">
+          <span class="layer__depth" aria-hidden="true">1.000 m</span>
+          <h3 class="h2">Backend sólido</h3>
+          <p class="layer__what">Lógica: o que faz tudo funcionar.</p>
+          <p>Python e PHP para lógica de negócio confiável.</p>
         </div>
-
-        <!-- Título da seção de diferenciais -->
-        <h2 class="texto_destaque">Nosso Diferencial</h2>
-
-        <!-- Cards de diferenciais -->
-        <div
-          class="tecnologias-contrato"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <!-- Diferencial 1: Backend -->
-          <div class="tecnologia-contrato">
-            <i class="bi bi-hdd-stack icones HDD"></i>
-            <p class="texto_destaque_div">Backend Sólido</p>
-            <p class="texto_div">
-              Python e PHP para lógica de negócio confiável
-            </p>
-          </div>
-
-          <!-- Diferencial 2: Frontend -->
-          <div
-            class="tecnologia-contrato"
-            data-aos="fade-up"
-            data-aos-delay="350"
-          >
-            <i class="bi bi-code-slash icones CODE"></i>
-            <p class="texto_destaque_div">Frontend Moderno</p>
-            <p class="texto_div">
-              HTML5, CSS3 e JavaScript para interfaces fluidas
-            </p>
-          </div>
-
-          <!-- Diferencial 3: Dados -->
-          <div
-            class="tecnologia-contrato"
-            data-aos="fade-up"
-            data-aos-delay="450"
-          >
-            <i class="bi bi-database icones DATA"></i>
-            <p class="texto_destaque_div">Dados Estruturados</p>
-            <p class="texto_div">
-              Arquitetura de banco de dados eficiente e segura
-            </p>
-          </div>
+        <figure class="layer__artifact"><div class="code">
+  <div class="code__top"><span class="label">api.php</span><span class="label">PHP · MySQLi</span></div>
+  <pre><code><span class="code-line"><span class="tk-c">// api.php — lista o scrap do usuário logado</span></span><span class="code-line"><span class="tk-v">$s</span> = <span class="tk-v">$conexao</span>-&gt;<span class="tk-f">prepare</span>(</span><span class="code-line">  <span class="tk-s">"SELECT id, data_registro AS data, linha, produto, causa,</span></span><span class="code-line"><span class="tk-s">   quantidade AS qtd, custo_unitario AS custo FROM scrap</span></span><span class="code-line"><span class="tk-s">   WHERE usuario_id=? ORDER BY data_registro DESC, id DESC"</span>);</span><span class="code-line"><span class="tk-v">$s</span>-&gt;<span class="tk-f">bind_param</span>(<span class="tk-s">"i"</span>, <span class="tk-v">$uid</span>);</span><span class="code-line"><span class="tk-v">$s</span>-&gt;<span class="tk-f">execute</span>();</span><span class="code-line"><span class="tk-k">echo</span> <span class="tk-f">json_encode</span>(<span class="tk-v">$s</span>-&gt;<span class="tk-f">get_result</span>()-&gt;<span class="tk-f">fetch_all</span>(<span class="tk-v">MYSQLI_ASSOC</span>));</span></code></pre>
+</div>
+<figcaption class="layer__caption">Trecho real da API do nosso controle de scrap. Consulta preparada: o dado do usuário nunca vira SQL.</figcaption></figure>
+      </li>
+      <li class="layer">
+        <div class="layer__text">
+          <span class="layer__depth" aria-hidden="true">4.000 m</span>
+          <h3 class="h2">Dados estruturados</h3>
+          <p class="layer__what">Dados: o que guarda tudo.</p>
+          <p>Arquitetura de banco de dados eficiente e segura.</p>
         </div>
+        <figure class="layer__artifact"><div class="er">
+  <div class="er__table"><header>usuarios <span>tabela</span></header><ul><li class="is-key" data-key="id"><span>id</span><span>INT PK</span></li><li><span>nome</span><span>VARCHAR(100)</span></li><li><span>email</span><span>VARCHAR(120) UQ</span></li><li><span>telefone</span><span>VARCHAR(20)</span></li><li><span>senha</span><span>VARCHAR(255)</span></li></ul></div>
+  <div class="er__table er__table--offset"><header>scrap <span>tabela</span></header><ul><li class="is-key"><span>id</span><span>INT PK</span></li><li class="is-key" data-fk><span>usuario_id</span><span>INT FK</span></li><li><span>data_registro</span><span>DATE</span></li><li><span>linha</span><span>VARCHAR(40)</span></li><li><span>produto</span><span>VARCHAR(80)</span></li><li><span>causa</span><span>VARCHAR(60)</span></li><li><span>quantidade</span><span>INT</span></li><li><span>custo_unitario</span><span>DECIMAL(10,2)</span></li></ul></div>
+  <svg class="er__link" aria-hidden="true"><path d=""/><circle r="3.5"/><circle r="3.5"/></svg>
+</div>
+<figcaption class="layer__caption">Estrutura real do nosso banco (banco.sql): cada registro de scrap pertence a um usuário, com exclusão em cascata.</figcaption></figure>
+      </li>
+    </ol>
+  </div>
+</section>
 
-        <!-- Chamada final para ação -->
-        <h2 class="texto_destaque">Pronto Pra Começar?</h2>
+<section class="section stack" data-depth="3400" aria-labelledby="stack-title">
+  <div class="wrap">
+    <div class="stack__head">
+      <h2 class="h1" id="stack-title" data-split>Nossa stack tecnológica</h2>
+      <p class="lead">As ferramentas com que construímos cada camada.</p>
+    </div>
+    <ul class="stack__list" data-stagger>
+      <li class="stack__row"><i class="fa-brands fa-js stack__icon" aria-hidden="true"></i><span class="stack__name">JavaScript</span><span class="stack__desc">Interfaces modernas e dinâmicas</span><span class="stack__layer label">Interface</span></li>
+      <li class="stack__row"><i class="fa-brands fa-html5 stack__icon" aria-hidden="true"></i><span class="stack__name">HTML</span><span class="stack__desc">Estrutura semântica e acessível</span><span class="stack__layer label">Interface</span></li>
+      <li class="stack__row"><i class="fa-brands fa-css3-alt stack__icon" aria-hidden="true"></i><span class="stack__name">CSS3</span><span class="stack__desc">Design responsivo e performático</span><span class="stack__layer label">Interface</span></li>
+      <li class="stack__row"><i class="fa-brands fa-python stack__icon" aria-hidden="true"></i><span class="stack__name">Python</span><span class="stack__desc">Automação de dados inteligente</span><span class="stack__layer label">Lógica</span></li>
+      <li class="stack__row"><i class="fa-brands fa-php stack__icon" aria-hidden="true"></i><span class="stack__name">PHP</span><span class="stack__desc">Backend robusto e escalável</span><span class="stack__layer label">Lógica</span></li>
+    </ul>
+  </div>
+</section>
 
-        <p class="texto_conteudo">
-          Entre em contato para discutir como podemos transformar suas ideias em
-          realidade digital!
-        </p>
-
-        <button class="botao_contato">Fale Conosco</button>
-      </section>
-    </main>
-
-    <!-- ============================================
-        RODAPÉ (FOOTER)
-        Informações de copyright
-    ============================================ -->
-    <footer>
-      <h6>Reservado por Todos os direitos</h6>
-    </footer>
-
-    <!-- 
-      SCRIPTS:
-      - AOS: Biblioteca de animações ao scroll
-      - Inicialização do AOS com configurações personalizadas
-    -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-      // Inicializa as animações AOS
-      AOS.init({
-        duration: 800, // Duração da animação em ms
-        once: true, // Animação executa apenas uma vez
-        disableMutationObserver: false,
-      });
-    </script>
-  </body>
+<section class="section close" data-depth="4000" aria-labelledby="close-title">
+  <div class="wrap">
+    <h2 class="display close__title" id="close-title" data-split>Pronto pra começar?</h2>
+    <div class="close__row" data-rise>
+      <p>Entre em contato para discutir como podemos transformar suas ideias em realidade digital.</p>
+      <div class="close__actions">
+        <a class="btn btn--boia" href="cadastro.html" data-magnetic><span class="btn__label">Iniciar projeto</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
+        <a class="btn btn--ghost" href="login.html"><span class="btn__label">Área do cliente</span><span class="btn__icon"><svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <svg class="seabed" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
+    <path class="contour" d="M0 66C120 40 220 58 330 48S560 22 700 44 960 74 1090 52 1320 32 1440 46"/>
+    <path class="contour" d="M0 96C140 74 250 92 360 82S580 62 720 80 980 102 1100 88 1320 70 1440 82"/>
+    <path class="ground" d="M0 140V94c110-22 210 4 320-6s150-34 260-28 180 36 300 34 180-24 290-22 180 16 270 10v58Z"/>
+  </svg>
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brandcol">
+        <a class="brand" href="index.html" aria-label="Netuno, página inicial"><svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg><span class="brand__word">NETUNO</span></a>
+        <p class="footer__about">Estúdio de software nascido como TCC do curso de Desenvolvimento de Sistemas. Cinco estudantes, três camadas de software.</p>
+      </div>
+      <nav aria-label="Site">
+        <h2 class="label">Site</h2>
+        <ul><li><a href="index.html">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="projeto.html">Projetos</a></li><li><a href="sobre.html">Sobre</a></li></ul>
+      </nav>
+      <nav aria-label="Conta">
+        <h2 class="label">Conta</h2>
+        <ul><li><a href="login.html">Área do cliente</a></li><li><a href="cadastro.html">Criar conta</a></li></ul>
+      </nav>
+      <div>
+        <h2 class="label">Profundidade</h2>
+        <p class="footer__about" style="margin:0 0 1rem">Você chegou a <span class="num" data-depth-max>4.000 m</span>.</p>
+        <button class="surface-btn" type="button" data-surface><svg class="i" aria-hidden="true"><use href="#i-arrow-up"/></svg>Voltar à superfície</button>
+        <button class="surface-btn motion-toggle" type="button" data-motion-toggle aria-pressed="true">Animações: <span>completas</span></button>
+      </div>
+    </div>
+    <div class="footer__base"><span>© 2026 Netuno. Todos os direitos reservados.</span><span>Projeto de TCC · Desenvolvimento de Sistemas</span></div>
+  </div>
+</footer>
+</div></div>
+<div class="tide" aria-hidden="true">
+  <div class="tide__sky"><div class="tide__brand"><svg class="tide__mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <circle class="ring" cx="50" cy="50" r="45" stroke-width="5"/>
+  <g class="trident" stroke-width="4.5"><path d="M50 76V17"/><path d="M43.5 27 50 16l6.5 11"/><path d="M33 21c-1 13 3 23 17 26 14-3 18-13 17-26"/><path d="M29.5 26 33 20l3.5 6"/><path d="M63.5 26 67 20l3.5 6"/></g>
+  <g class="waves" stroke-width="4.5" clip-path="url(#markClip)"><path d="M6 62c16-9 30 5 45-3s27-10 45-5"/><path d="M6 71c16-9 31 5 46-3s27-10 44-5"/><path d="M8 80c16-8 30 5 45-3s26-9 41-6"/></g>
+</svg><span class="tide__word">NETUNO</span><span class="tide__tag">Guiding through uncertainty</span></div></div>
+  <div class="tide__water"><div class="tide__brand"><svg class="tide__mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <circle class="ring" cx="50" cy="50" r="45" stroke-width="5"/>
+  <g class="trident" stroke-width="4.5"><path d="M50 76V17"/><path d="M43.5 27 50 16l6.5 11"/><path d="M33 21c-1 13 3 23 17 26 14-3 18-13 17-26"/><path d="M29.5 26 33 20l3.5 6"/><path d="M63.5 26 67 20l3.5 6"/></g>
+  <g class="waves" stroke-width="4.5" clip-path="url(#markClip)"><path d="M6 62c16-9 30 5 45-3s27-10 45-5"/><path d="M6 71c16-9 31 5 46-3s27-10 44-5"/><path d="M8 80c16-8 30 5 45-3s26-9 41-6"/></g>
+</svg><span class="tide__word">NETUNO</span><span class="tide__tag">Guiding through uncertainty</span></div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+<script src="assets/js/netuno.js"></script>
+</body>
 </html>

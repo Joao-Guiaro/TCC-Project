@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS netuno CHARACTER SET utf8mb4;
+USE netuno;
+CREATE TABLE IF NOT EXISTS usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(120) NOT NULL UNIQUE,
+  telefone VARCHAR(20),
+  senha VARCHAR(255) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS scrap (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario_id INT NOT NULL,
+  data_registro DATE NOT NULL,
+  linha VARCHAR(40) NOT NULL,
+  produto VARCHAR(80) NOT NULL,
+  causa VARCHAR(60) NOT NULL,
+  quantidade INT NOT NULL,
+  custo_unitario DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
+  INDEX (usuario_id, data_registro)
+);
